@@ -26,7 +26,7 @@ fileSchema.post("save", async function(doc){
         console.log("DOC", doc)
 
         //transporter
-        let transporter = nodemailer.transporter({
+        let transporter = nodemailer.createTransport({
             host:process.env.MAIL_HOST,
             auth:{
                 user:process.env.MAIL_USER,
